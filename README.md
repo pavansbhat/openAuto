@@ -5,7 +5,7 @@ Open Auto project is a simple MERN stack application.
 ## Starting Local Development
 
 ### Backend : 
-Pre-requisites : [Node](https://nodejs.org/en/), [MongoDB](https://www.mongodb.com/)
+Pre-requisites : [NodeJS](https://nodejs.org/en/), [MongoDB](https://www.mongodb.com/)
 
 Clone this repo and navigate to Backend folder and do the  `npm install`.
 
