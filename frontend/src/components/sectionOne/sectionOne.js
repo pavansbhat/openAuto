@@ -31,7 +31,7 @@ import InstagramLogo from "../../assets/insta.svg";
 import noHover from "../../assets/noShow.svg";
 import hover from "../../assets/show.svg";
 
-export const SectionOne = () => {
+export const SectionOne = ({ mainRef }) => {
   const [isShown, setIsShown] = useState(false);
   const {
     register,
@@ -39,6 +39,15 @@ export const SectionOne = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => userRequest(data);
+
+  const handleScroll = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <StyledContainer>
@@ -88,7 +97,12 @@ export const SectionOne = () => {
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
           >
-            <PageScroll src={isShown ? hover : noHover} />
+            <PageScroll
+              src={isShown ? hover : noHover}
+              onClick={() => {
+                handleScroll(mainRef.current);
+              }}
+            />
           </PageScrollArea>
         </StyledScrollContainer>
         <StyledSocialMediaContainer>

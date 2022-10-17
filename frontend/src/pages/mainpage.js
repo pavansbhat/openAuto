@@ -2,11 +2,13 @@ import { Container } from "../components/container";
 import { Navbar } from "../components/navbar/navbar";
 import { SectionOne } from "../components/sectionOne";
 import { SectionTwo } from "../components/sectionTwo";
+import React, { useRef } from "react";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const MainPage = () => {
+  const mainRef = useRef(null);
   return (
     <Container>
       <ToastContainer
@@ -21,8 +23,8 @@ export const MainPage = () => {
         pauseOnHover
       />
       <Navbar />
-      <SectionOne />
-      <SectionTwo />
+      <SectionOne mainRef={mainRef} />
+      <SectionTwo mainRef={mainRef} />
     </Container>
   );
 };

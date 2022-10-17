@@ -35,9 +35,9 @@ import yt from "../../assets/yt.svg";
 import ln from "../../assets/ln.svg";
 import insta from "../../assets/insta.svg";
 
-export const SectionTwo = () => {
+export const SectionTwo = ({ mainRef }) => {
   return (
-    <StyledContainer>
+    <StyledContainer ref={mainRef}>
       <StyledContainerTwo>
         <StyledMobileSection>
           <PickupMobileImage src={pickup2} alt="mobile image" />
@@ -72,16 +72,15 @@ export const SectionTwo = () => {
               service@openauto.ca
             </Email>
           </Contact>
-          
         </LeftFooterSection>
 
         <RightFooterSection>
-        <FooterContent>Open Auto @ all rights reserved</FooterContent>
-        <StyledPageDocLinks>
-          <StyledPageDocText>Privacy policy</StyledPageDocText>
-          <StyledPageDocText>Term of use</StyledPageDocText>
-          <StyledPageDocText>Cookie policy</StyledPageDocText>
-        </StyledPageDocLinks>
+          <FooterContent>Open Auto @ all rights reserved</FooterContent>
+          <StyledPageDocLinks>
+            <StyledPageDocText>Privacy policy</StyledPageDocText>
+            <StyledPageDocText>Term of use</StyledPageDocText>
+            <StyledPageDocText>Cookie policy</StyledPageDocText>
+          </StyledPageDocLinks>
           <SocialMediaFooter>
             <MediaSVG src={facebook} alt="facebook" />
             <MediaSVG src={twitter} alt="twitter" />
